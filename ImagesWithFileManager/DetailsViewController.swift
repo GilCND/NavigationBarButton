@@ -39,7 +39,7 @@ class DetailsViewController: UIViewController {
     @objc func shareTapped() {
         guard let image = imgView.image?.jpegData(compressionQuality: 0.8), let imageName = nameOfImage else {
             print ("No image found")
-            return	
+            return
         }
         let vc = UIActivityViewController(activityItems: [image, imageName], applicationActivities: [])
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
